@@ -1,0 +1,158 @@
+* {
+    background-color: #1a2c3e;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    text-align: center;
+
+}
+
+.a {
+    margin-top: 200px;
+    margin-right: 200px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: #FFA500;
+    border-radius: 15px;
+    border: 1px solid black;
+    animation-name: bkg-change;
+    animation-duration: 4s;
+
+}
+
+
+@keyframes bkg-change {
+    0% {
+        background-color: #FFFFFF;
+    }
+
+    25% {
+        background-color: #FFFF00;
+    }
+
+    50% {
+        background-color: #FF0000;
+    }
+
+    100% {
+        background-color: #FF00FF;
+    }
+}
+
+.b {
+    margin-top: 200px;
+    margin-right: 200px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: #FFFF00;
+    border-radius: 15px;
+    border: 1px solid black;
+
+
+}
+
+.b:hover {
+    animation: spin 2s forwards;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        width: 200px;
+        height: 200px;
+        background-color: #FFFF00;
+        border-radius: 7px;
+    }
+
+    to {
+        transform: rotate(1800deg);
+        width: 100px;
+        height: 100px;
+        background-color: #FF0000;
+        border-radius: 1em;
+    }
+}
+
+.c {
+    margin-top: 200px;
+    margin-right: 200px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: #FF00FF;
+    border: 1px solid black;
+    border-radius: 15px;
+    animation-name: fade;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.d {
+    margin-top: 200px;
+    margin-right: 200px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: #00FF00;
+    border: 1px solid black;
+    border-radius: 15px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    border: 10px solid rgb(34, 222, 197);
+    border-radius: 30px;
+    background-color: rgb(34, 222, 197);
+
+}
+
+a {
+    background-color: rgb(34, 222, 197);
+    color: black;
+    text-decoration: none;
+}

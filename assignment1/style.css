@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    border: 10px solid rgb(34, 222, 197);
+    border-radius: 30px;
+    background-color: rgb(34, 222, 197);
+
+}
+
+a {
+    background-color: rgb(34, 222, 197);
+    color: black;
+    text-decoration: none;
+}
