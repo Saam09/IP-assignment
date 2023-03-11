@@ -1,0 +1,23 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>Hello</servlet-name>
+        <servlet-class>p1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Hello</servlet-name>
+        <url-pattern>/HellWorld</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Stud</servlet-name>
+        <servlet-class>p2</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Stud</servlet-name>
+        <url-pattern>/Student</url-pattern>
+    </servlet-mapping>
+
+</web-app>
