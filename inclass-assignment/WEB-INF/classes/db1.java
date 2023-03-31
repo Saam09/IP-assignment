@@ -39,7 +39,16 @@ public class db1 extends HttpServlet {
                 out.println("<td>" + rs.getInt("year") + "</td>");
                 out.println("<td>" + rs.getDouble("rating") + "</td>");
                 out.println("<td>" + rs.getString("country") + "</td>");
-                out.println("<td>" + rs.getString("comments") + "</td>");
+                String comments = rs.getString("comments");
+                if (comments == null || comments.isEmpty()) {
+                    out.println(
+                            "<td><form method=\"post\" onsubmit=\"./updatecomments\"><input type=\"hidden\" name=\"id\" value=\""
+                                    + rs.getInt("id") + "\">" +
+                                    "<textarea name=\"comments\" rows=\"3\" cols=\"20\"></textarea><br>" +
+                                    "<input type=\"submit\" value=\"Update\"></form></td>");
+                } else {
+                    out.println("<td>" + comments + "</td>");
+                }
                 out.println("</tr>");
             }
             out.println("</table></body></html>");
