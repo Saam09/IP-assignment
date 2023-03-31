@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+            var user = document.myform.usr.value;
+            var password = document.myform.pwd.value;
+            if (user == "" || password == "") {
+                alert("Both fields must be filled out");
+                document.myform.pwd.focus();
+                return false;
+            }
+
+            const regexlogin = /^[a-zA-Z0-9][a-zA-Z0-9]*$/;
+            const regexpass = /^[a-zA-Z0-9!@#$%^&*()]{6,14}$/;
+
+
+            if (!regexlogin.test(user)) {
+                alert("Login ID should contain a combination of numbers and alphabets");
+                return false;
+            }
+
+            if (!regexpass.test(password)) {
+                alert("Password should be minimum of 6 and maximum of 14 characters and should be a combination of alphabets, numbers and special symbols except '_' ");
+                return false;
+            }
+            alert("Login Details are Valid.")
+        }
+    </script>
+    <style>
+        .box-shadow {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        h1:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body align="center">
+    <form name="myform" action="./index.html">
+        <h1 style="color:white" class="box-shadow">L O G I N</h1>
+        <table align="center" cellpadding="25">
+
+            <tr>
+                <th><label for="username">Username:</label></th>
+                <td>
+                    <input type="text" name="usr">
+                </td>
+            </tr>
+            <tr>
+                <th><label for="username">Password:</label></th>
+                <td>
+                    <input type="password" name="pwd">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit" onclick="validate()">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+</html>
